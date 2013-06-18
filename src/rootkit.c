@@ -1,3 +1,12 @@
+// Beneath C Level - Rootkit tutorial
+//
+// rootkit.c - The main file that loads and hides the rootkit
+//
+// Author: Nick Newson
+// Website: http://beneathclevel.blogspot.co.uk/
+//
+// Tab size = 4
+
 #include <linux/module.h>
 #include <linux/kernel.h>
 

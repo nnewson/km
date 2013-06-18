@@ -1,3 +1,12 @@
+// Beneath C Level - Rootkit tutorial
+//
+// symbols.h - The auto generated file (from symbols_template.h) that looks up unexported symbols from System.map
+//
+// Author: Nick Newson
+// Website: http://beneathclevel.blogspot.co.uk/
+//
+// Tab size = 4
+
 #ifndef __SYMBOLS_H__
 #define __SYMBOLS_H__
 
