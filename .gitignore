@@ -1,3 +1,6 @@
+# Ignore the symbols file - it's auto generated
+src/symbols.h
+
 .clang_complete
 *.out
 *.o
