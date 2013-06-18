@@ -1,0 +1,4 @@
+.clang_complete
+*.out
+*.o
+cscope.files
