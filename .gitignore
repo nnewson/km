@@ -2,6 +2,7 @@
 src/symbols.h
 
 .clang_complete
+.*.cmd
 *.out
 *.o
 cscope.files

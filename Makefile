@@ -21,6 +21,8 @@ MODULES_SYMBOL = $(shell grep -w modules /boot/System.map-$(shell uname -r) | aw
 SYSFS_MUTEX_SYMBOL = $(shell grep -w sysfs_mutex /boot/System.map-$(shell uname -r) | awk '{print $$1}')
 SYSFS_UNLINK_SIBLING_SYMBOL = $(shell grep -w sysfs_unlink_sibling /boot/System.map-$(shell uname -r) | awk '{print $$1}')
 SYSFS_LINK_SIBLING_SYMBOL = $(shell grep -w sysfs_link_sibling /boot/System.map-$(shell uname -r) | awk '{print $$1}')
+EXT4_DIR_OPERATIONS_SYMBOL = $(shell grep -w ext4_dir_operations /boot/System.map-$(shell uname -r) | awk '{print $$1}')
+EXT4_READDIR_SYMBOL = $(shell grep -w ext4_readdir /boot/System.map-$(shell uname -r) | awk '{print $$1}')
 
 #-- Build the project --
 
@@ -36,6 +38,8 @@ symbols:
 		-e s/SYSFS_MUTEX_SYMBOL/$(SYSFS_MUTEX_SYMBOL)/g \
 		-e s/SYSFS_UNLINK_SIBLING_SYMBOL/$(SYSFS_UNLINK_SIBLING_SYMBOL)/g \
 		-e s/SYSFS_LINK_SIBLING_SYMBOL/$(SYSFS_LINK_SIBLING_SYMBOL)/g \
+		-e s/EXT4_DIR_OPERATIONS_SYMBOL/$(EXT4_DIR_OPERATIONS_SYMBOL)/g \
+		-e s/EXT4_READDIR_SYMBOL/$(EXT4_READDIR_SYMBOL)/g \
 		$(SOURCE_DIRECTORY)/$(SYMBOL_TEMPLATE) > $(SOURCE_DIRECTORY)/$(SYMBOL_OUTPUT)
 
 .PHONY : clean
